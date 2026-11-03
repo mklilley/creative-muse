@@ -1,0 +1,4 @@
+interface:
+  default_prompt: I need a journalling prompt for my morning pages today
+  display_name: Creative Muse
+  short_description: Journal prompts & artist dates
