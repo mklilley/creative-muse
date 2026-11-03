@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and inspect a draft upload ZIP from an explicit, audited file list."""
+"""Build and inspect a plugin upload ZIP from an explicit file list."""
 
 import hashlib
 import json
@@ -88,7 +88,7 @@ def build():
     payload, version, width, height = collect_and_validate()
     destination = ROOT / "dist"
     destination.mkdir(exist_ok=True)
-    archive_path = destination / f"creative-muse-{version}-draft.zip"
+    archive_path = destination / f"creative-muse-{version}.zip"
     with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         for name, data in payload.items():
             info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
@@ -113,7 +113,7 @@ def build():
     report = [
         f"Archive: {archive_path.name}",
         f"SHA-256: {digest}",
-        "Local checks passed. This is a draft package, not an OpenAI approval.",
+        "Local package checks passed. OpenAI review and publication are separate steps.",
         "Listing URLs are configured; live availability is not checked by this script.",
         f"PNG icon: {width} x {height}, {len(payload['assets/gpt-icon.png'])} bytes",
         "", "Actual archive contents (size, SHA-256, path):",

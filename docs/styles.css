@@ -44,8 +44,6 @@ blockquote p { margin-bottom: .5rem; }
 .prose h2 { font-size: 1.7rem; margin-top: 2.2rem; }
 .prose ul { padding-left: 1.3rem; }
 .prose li { margin-block: .6rem; }
-.pending { border-left: 3px solid #a7812d; padding: .9rem 1.2rem; background: #f3ecdb; }
-.pending p:last-child { margin-bottom: 0; }
 .contact { font-size: 1.2rem; overflow-wrap: anywhere; }
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-block: 1.7rem; border-top: 1px solid var(--line); font-size: .875rem; color: var(--muted); }
 footer p { margin: 0; }
